@@ -178,8 +178,8 @@ function Hero() {
           </div>
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border/70 pt-6">
             {[
-              { n: "12+", l: "anos de prática" },
-              { n: "1.5k", l: "pacientes atendidos" },
+              { n: "IBMR", l: "Graduada em Fisioterapia" },
+              { n: "UTI", l: "Pós-graduação em andamento" },
               { n: "4.9★", l: "avaliação média" },
             ].map((s) => (
               <div key={s.l}>
@@ -197,7 +197,7 @@ function Hero() {
           <div className="relative overflow-hidden rounded-[2rem] shadow-[var(--shadow-card-hover)]">
             <img
               src={heroImg}
-              alt="Dra. Helena Martins, fisioterapeuta"
+              alt="Dra. Maria Luiza De La Torre, fisioterapeuta"
               width={1024}
               height={1280}
               className="aspect-[4/5] w-full object-cover"
@@ -337,9 +337,9 @@ function Method() {
 /* ---------------- ABOUT ---------------- */
 function About() {
   const creds = [
-    "Graduada em Fisioterapia (USP)",
+    "Graduada em Fisioterapia (IBMR)",
+    "Pós-graduação em UTI (em andamento)",
     "Especialista em Ortopedia e Traumatologia",
-    "Pós-graduada em Fisioterapia Esportiva",
     "Certificação em Pilates Clínico e RPG",
   ];
   return (
