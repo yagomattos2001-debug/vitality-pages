@@ -7,11 +7,8 @@ import {
   ClipboardList,
   HeartPulse,
   Menu,
-  MessageCircle,
   Phone,
-  Quote,
   Sparkles,
-  Star,
   Stethoscope,
   Target,
   TrendingUp,
@@ -19,8 +16,6 @@ import {
   Instagram,
   Facebook,
   Mail,
-  MapPin,
-  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,6 +26,19 @@ import {
 } from "@/components/ui/accordion";
 import heroImg from "@/assets/therapist-hero.jpg";
 import aboutImg from "@/assets/therapist-about.jpg";
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.121-19.662A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,7 +71,7 @@ function Landing() {
       <Conditions />
       <Method />
       <About />
-      <Testimonials />
+      <Highlights />
       <FAQ />
       <CTABanner />
       <Footer />
@@ -78,7 +86,7 @@ function Nav() {
     { href: "#conditions", label: "Condições" },
     { href: "#method", label: "Método" },
     { href: "#about", label: "Sobre" },
-    { href: "#testimonials", label: "Depoimentos" },
+    { href: "#highlights", label: "Diferenciais" },
     { href: "#faq", label: "FAQ" },
   ];
   return (
@@ -106,7 +114,7 @@ function Nav() {
         <div className="hidden md:block">
           <Button asChild variant="whatsapp" size="default">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener">
-              <MessageCircle /> Agendar
+              <WhatsAppIcon className="h-4 w-4" /> Agendar
             </a>
           </Button>
         </div>
@@ -133,7 +141,7 @@ function Nav() {
             ))}
             <Button asChild variant="whatsapp" className="mt-2">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener">
-                <MessageCircle /> Agendar avaliação
+                <WhatsAppIcon className="h-4 w-4" /> Agendar avaliação
               </a>
             </Button>
           </div>
@@ -155,7 +163,7 @@ function Hero() {
         <div className="animate-fade-in">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
             <Sparkles className="h-3.5 w-3.5" />
-            CREFITO 3/123456-F
+            CREFITO 450593-F
           </span>
           <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Movimento sem dor,{" "}
@@ -169,7 +177,7 @@ function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button asChild variant="hero" size="xl">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener">
-                <MessageCircle /> Agendar avaliação
+                <WhatsAppIcon className="h-5 w-5" /> Agendar avaliação
               </a>
             </Button>
             <Button asChild variant="outlineSoft" size="xl">
@@ -339,8 +347,6 @@ function About() {
   const creds = [
     "Graduada em Fisioterapia (IBMR)",
     "Pós-graduação em UTI (em andamento)",
-    "Especialista em Ortopedia e Traumatologia",
-    "Certificação em Pilates Clínico e RPG",
   ];
   return (
     <section id="about" className="bg-[var(--surface)] py-20 md:py-28">
@@ -383,7 +389,7 @@ function About() {
           <div className="mt-8">
             <Button asChild variant="hero" size="lg">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener">
-                <MessageCircle /> Conversar com a Dra. Maria Luiza
+                <WhatsAppIcon className="h-5 w-5" /> Conversar com a Dra. Maria Luiza
               </a>
             </Button>
           </div>
@@ -393,64 +399,48 @@ function About() {
   );
 }
 
-/* ---------------- TESTIMONIALS ---------------- */
-function Testimonials() {
+/* ---------------- HIGHLIGHTS ---------------- */
+function Highlights() {
   const items = [
     {
-      name: "Carolina Souza",
-      role: "Corredora amadora",
-      text: "Voltei a correr sem dor depois de meses parada. O plano foi específico para o meu objetivo e a evolução foi sentida em poucas semanas.",
-      initials: "CS",
+      title: "Atendimento Individualizado",
+      desc: "Cada paciente recebe um plano de tratamento único, desenhado a partir da avaliação física completa e dos objetivos pessoais.",
     },
     {
-      name: "Rafael Lima",
-      role: "Engenheiro, 38 anos",
-      text: "Dores na lombar há anos. Em um mês de tratamento, já sentia diferença real. A Helena é técnica, atenciosa e explica tudo com clareza.",
-      initials: "RL",
+      title: "Protocolos Baseados em Evidência",
+      desc: "Técnicas atualizadas com base na literatura científica atual para garantir resultados consistentes e seguros.",
     },
     {
-      name: "Mariana Pires",
-      role: "Pós-operatório de joelho",
-      text: "Recuperação muito mais rápida do que esperava. Me senti acompanhada em cada etapa e segura para retomar minhas atividades.",
-      initials: "MP",
+      title: "Acompanhamento Contínuo",
+      desc: "A evolução é monitorada sessão a sessão, com ajustes no plano sempre que necessário para otimizar a recuperação.",
+    },
+    {
+      title: "Alta com Prevenção",
+      desc: "O tratamento não termina na melhora dos sintomas. O paciente sai orientado para manter os resultados e evitar recidivas.",
     },
   ];
   return (
-    <section id="testimonials" className="py-20 md:py-28">
+    <section id="highlights" className="py-20 md:py-28">
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Depoimentos"
-          title="Histórias de quem voltou a se mover"
-          subtitle="Resultados reais de pacientes que confiaram no processo."
+          eyebrow="Diferenciais"
+          title="Por que escolher o atendimento"
+          subtitle="Compromissos reais que torn:odo paciente encontra desde o primeiro contato."
         />
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {items.map((t) => (
-            <figure
-              key={t.name}
-              className="group relative flex flex-col rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-sm)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]"
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-sm)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]"
             >
-              <Quote className="h-7 w-7 text-primary/30" />
-              <div className="mt-4 flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-[var(--star)] text-[var(--star)]"
-                  />
-                ))}
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <CheckCircle2 className="h-5 w-5" />
               </div>
-              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground">
-                "{t.text}"
-              </blockquote>
-              <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                <span className="grid h-11 w-11 place-items-center rounded-full bg-[var(--gradient-primary)] text-sm font-semibold text-primary-foreground">
-                  {t.initials}
-                </span>
-                <div>
-                  <div className="text-sm font-semibold">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
-                </div>
-              </figcaption>
-            </figure>
+              <h3 className="font-display text-lg font-semibold">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.desc}
+              </p>
+            </div>
           ))}
         </div>
       </div>
@@ -476,10 +466,6 @@ function FAQ() {
     {
       q: "Posso fazer fisioterapia mesmo sem encaminhamento médico?",
       a: "Sim. O fisioterapeuta é profissional de primeiro contato e habilitado para avaliação, diagnóstico funcional e tratamento.",
-    },
-    {
-      q: "Onde fica o consultório?",
-      a: "No bairro Jardins, em São Paulo, com fácil acesso por transporte público e estacionamento no local.",
     },
   ];
   return (
@@ -533,7 +519,7 @@ function CTABanner() {
             <div className="flex md:justify-end">
               <Button asChild variant="hero" size="xl">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener">
-                  <MessageCircle /> Falar no WhatsApp
+                  <WhatsAppIcon className="h-5 w-5" /> Falar no WhatsApp
                 </a>
               </Button>
             </div>
@@ -548,8 +534,8 @@ function CTABanner() {
 function Footer() {
   return (
     <footer className="border-t border-border bg-[var(--surface)]">
-      <div className="container-px mx-auto grid max-w-7xl gap-10 py-14 md:grid-cols-4">
-        <div className="md:col-span-2">
+      <div className="container-px mx-auto grid max-w-7xl gap-10 py-14 md:grid-cols-3">
+        <div>
           <div className="flex items-center gap-2">
             <span className="grid h-9 w-9 place-items-center rounded-full bg-[var(--gradient-primary)] text-primary-foreground">
               <HeartPulse className="h-4 w-4" />
@@ -563,7 +549,7 @@ function Footer() {
             científica.
           </p>
           <div className="mt-5 text-xs text-muted-foreground">
-            <span className="font-medium text-foreground">CREFITO</span> 3/123456-F
+            <span className="font-medium text-foreground">CREFITO</span> 450593-F
           </div>
         </div>
 
@@ -572,15 +558,11 @@ function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 text-primary" />
-              (11) 99999-9999
+              (21) 96462-9111
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 text-primary" />
-              contato@drahelena.com.br
-            </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 text-primary" />
-              Rua Augusta, 1500 — Jardins, São Paulo
+              malusl2001@gmail.com
             </li>
           </ul>
         </div>
@@ -591,7 +573,6 @@ function Footer() {
             {[
               { Icon: Instagram, label: "Instagram" },
               { Icon: Facebook, label: "Facebook" },
-              { Icon: MessageCircle, label: "WhatsApp" },
             ].map(({ Icon, label }) => (
               <a
                 key={label}
@@ -620,7 +601,7 @@ function Footer() {
         aria-label="Falar no WhatsApp"
         className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[var(--whatsapp)] text-white shadow-[var(--shadow-cta)] transition-all hover:-translate-y-0.5 hover:bg-[var(--whatsapp-hover)] hover:shadow-[var(--shadow-cta-hover)]"
       >
-        <MessageCircle className="h-6 w-6" />
+        <WhatsAppIcon className="h-6 w-6" />
       </a>
     </footer>
   );
@@ -654,6 +635,3 @@ function SectionHeading({
     </div>
   );
 }
-
-// silence unused
-void ChevronDown;
