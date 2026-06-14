@@ -53,7 +53,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATSAPP_URL =
-  "https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação.";
+  "https://wa.me/5521964629111?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação.";
 
 function Landing() {
   return (
