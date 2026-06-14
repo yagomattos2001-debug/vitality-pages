@@ -361,14 +361,13 @@ function About() {
             Sobre a profissional
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-            Dra. Helena Martins
+            Dra. Maria Luiza De La Torre
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Há mais de uma década dedicada à fisioterapia, Helena acredita em um
-            atendimento que une ciência, escuta atenta e protocolos
-            individualizados. Sua abordagem combina terapia manual avançada,
-            exercício terapêutico e educação em saúde para que cada paciente
-            entenda — e participe ativamente — da própria recuperação.
+            Maria Luiza acredita em um atendimento que une ciência, escuta atenta
+            e protocolos individualizados. Sua abordagem combina terapia manual
+            avançada, exercício terapêutico e educação em saúde para que cada
+            paciente entenda — e participe ativamente — da própria recuperação.
           </p>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {creds.map((c) => (
@@ -384,7 +383,7 @@ function About() {
           <div className="mt-8">
             <Button asChild variant="hero" size="lg">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener">
-                <MessageCircle /> Conversar com a Dra. Helena
+                <MessageCircle /> Conversar com a Dra. Maria Luiza
               </a>
             </Button>
           </div>
@@ -556,7 +555,7 @@ function Footer() {
               <HeartPulse className="h-4 w-4" />
             </span>
             <span className="font-display text-lg font-semibold tracking-tight">
-              Dra. Helena Martins
+              Dra. Maria Luiza De La Torre
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
@@ -608,7 +607,7 @@ function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="container-px mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground md:flex-row">
-          <span>© {new Date().getFullYear()} Dra. Helena Martins. Todos os direitos reservados.</span>
+          <span>© {new Date().getFullYear()} Dra. Maria Luiza De La Torre. Todos os direitos reservados.</span>
           <span>Feito com cuidado para acolher você.</span>
         </div>
       </div>
