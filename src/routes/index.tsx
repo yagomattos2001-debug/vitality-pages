@@ -35,13 +35,13 @@ import aboutImg from "@/assets/therapist-about.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dra. Helena Martins · Fisioterapia Clínica e Esportiva" },
+      { title: "Dra. Maria Luiza De La Torre · Fisioterapia Clínica e Esportiva" },
       {
         name: "description",
         content:
           "Atendimento personalizado em fisioterapia ortopédica, esportiva e postural. Avaliação completa, plano sob medida e recuperação acompanhada.",
       },
-      { property: "og:title", content: "Dra. Helena Martins · Fisioterapia" },
+      { property: "og:title", content: "Dra. Maria Luiza De La Torre · Fisioterapia" },
       {
         property: "og:description",
         content:
@@ -89,7 +89,7 @@ function Nav() {
             <HeartPulse className="h-4 w-4" />
           </span>
           <span className="font-display text-lg font-semibold tracking-tight">
-            Dra. Helena <span className="text-muted-foreground">Martins</span>
+            Dra. Maria Luiza <span className="text-muted-foreground">De La Torre</span>
           </span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
