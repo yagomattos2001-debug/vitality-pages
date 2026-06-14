@@ -425,7 +425,7 @@ function Highlights() {
         <SectionHeading
           eyebrow="Diferenciais"
           title="Por que escolher o atendimento"
-          subtitle="Compromissos reais que torn:odo paciente encontra desde o primeiro contato."
+          subtitle="Compromissos reais que todo paciente encontra desde o primeiro contato."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
