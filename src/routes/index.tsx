@@ -35,13 +35,13 @@ import aboutImg from "@/assets/therapist-about.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dra. Helena Martins · Fisioterapia Clínica e Esportiva" },
+      { title: "Dra. Maria Luiza De La Torre · Fisioterapia Clínica e Esportiva" },
       {
         name: "description",
         content:
           "Atendimento personalizado em fisioterapia ortopédica, esportiva e postural. Avaliação completa, plano sob medida e recuperação acompanhada.",
       },
-      { property: "og:title", content: "Dra. Helena Martins · Fisioterapia" },
+      { property: "og:title", content: "Dra. Maria Luiza De La Torre · Fisioterapia" },
       {
         property: "og:description",
         content:
@@ -89,7 +89,7 @@ function Nav() {
             <HeartPulse className="h-4 w-4" />
           </span>
           <span className="font-display text-lg font-semibold tracking-tight">
-            Dra. Helena <span className="text-muted-foreground">Martins</span>
+            Dra. Maria Luiza <span className="text-muted-foreground">De La Torre</span>
           </span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
@@ -178,8 +178,8 @@ function Hero() {
           </div>
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border/70 pt-6">
             {[
-              { n: "12+", l: "anos de prática" },
-              { n: "1.5k", l: "pacientes atendidos" },
+              { n: "IBMR", l: "Graduada em Fisioterapia" },
+              { n: "UTI", l: "Pós-graduação em andamento" },
               { n: "4.9★", l: "avaliação média" },
             ].map((s) => (
               <div key={s.l}>
@@ -197,7 +197,7 @@ function Hero() {
           <div className="relative overflow-hidden rounded-[2rem] shadow-[var(--shadow-card-hover)]">
             <img
               src={heroImg}
-              alt="Dra. Helena Martins, fisioterapeuta"
+              alt="Dra. Maria Luiza De La Torre, fisioterapeuta"
               width={1024}
               height={1280}
               className="aspect-[4/5] w-full object-cover"
@@ -337,9 +337,9 @@ function Method() {
 /* ---------------- ABOUT ---------------- */
 function About() {
   const creds = [
-    "Graduada em Fisioterapia (USP)",
+    "Graduada em Fisioterapia (IBMR)",
+    "Pós-graduação em UTI (em andamento)",
     "Especialista em Ortopedia e Traumatologia",
-    "Pós-graduada em Fisioterapia Esportiva",
     "Certificação em Pilates Clínico e RPG",
   ];
   return (
@@ -361,14 +361,13 @@ function About() {
             Sobre a profissional
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-            Dra. Helena Martins
+            Dra. Maria Luiza De La Torre
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Há mais de uma década dedicada à fisioterapia, Helena acredita em um
-            atendimento que une ciência, escuta atenta e protocolos
-            individualizados. Sua abordagem combina terapia manual avançada,
-            exercício terapêutico e educação em saúde para que cada paciente
-            entenda — e participe ativamente — da própria recuperação.
+            Maria Luiza acredita em um atendimento que une ciência, escuta atenta
+            e protocolos individualizados. Sua abordagem combina terapia manual
+            avançada, exercício terapêutico e educação em saúde para que cada
+            paciente entenda — e participe ativamente — da própria recuperação.
           </p>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {creds.map((c) => (
@@ -384,7 +383,7 @@ function About() {
           <div className="mt-8">
             <Button asChild variant="hero" size="lg">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener">
-                <MessageCircle /> Conversar com a Dra. Helena
+                <MessageCircle /> Conversar com a Dra. Maria Luiza
               </a>
             </Button>
           </div>
@@ -556,7 +555,7 @@ function Footer() {
               <HeartPulse className="h-4 w-4" />
             </span>
             <span className="font-display text-lg font-semibold tracking-tight">
-              Dra. Helena Martins
+              Dra. Maria Luiza De La Torre
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
@@ -608,7 +607,7 @@ function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="container-px mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground md:flex-row">
-          <span>© {new Date().getFullYear()} Dra. Helena Martins. Todos os direitos reservados.</span>
+          <span>© {new Date().getFullYear()} Dra. Maria Luiza De La Torre. Todos os direitos reservados.</span>
           <span>Feito com cuidado para acolher você.</span>
         </div>
       </div>
