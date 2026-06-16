@@ -24,7 +24,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroImg from "@/assets/therapist-hero.jpg";
+import heroAsset from "@/assets/maria-luiza-hero.jpg.asset.json";
 import aboutImg from "@/assets/therapist-about.jpg";
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -204,7 +204,7 @@ function Hero() {
           <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-[var(--gradient-primary)] opacity-10 blur-2xl" />
           <div className="relative overflow-hidden rounded-[2rem] shadow-[var(--shadow-card-hover)]">
             <img
-              src={heroImg}
+              src={heroAsset.url}
               alt="Dra. Maria Luiza De La Torre, fisioterapeuta"
               width={1024}
               height={1280}
