@@ -25,7 +25,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import heroAsset from "@/assets/maria-luiza-hero.jpg.asset.json";
-import aboutImg from "@/assets/therapist-about.jpg";
+import aboutAsset from "@/assets/maria-luiza-about.jpg.asset.json";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Atendimento personalizado em fisioterapia ortopédica, esportiva e postural. Avaliação completa, plano sob medida e recuperação acompanhada.",
+          "Atendimento personalizado em fisioterapia ortopédica e esportiva. Avaliação completa, plano sob medida e recuperação acompanhada.",
       },
       { property: "og:title", content: "Dra. Maria Luiza De La Torre · Fisioterapia" },
       {
@@ -170,7 +170,7 @@ function Hero() {
             <span className="text-primary">vida em equilíbrio.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Fisioterapia clínica, esportiva e postural com avaliação detalhada
+            Fisioterapia clínica e esportiva com avaliação detalhada
             e plano de tratamento sob medida — para você voltar ao que ama
             fazer, com confiança.
           </p>
@@ -187,7 +187,7 @@ function Hero() {
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border/70 pt-6">
             {[
               { n: "IBMR", l: "Graduada em Fisioterapia" },
-              { n: "UTI", l: "Pós-graduação em andamento" },
+              { n: "Terapia Intensiva", l: "Pós-graduação em andamento" },
               { n: "4.9★", l: "avaliação média" },
             ].map((s) => (
               <div key={s.l}>
@@ -240,11 +240,6 @@ function Conditions() {
       icon: TrendingUp,
       title: "Lesões esportivas",
       desc: "Reabilitação para corredores, atletas e amadores, com retorno seguro à modalidade.",
-    },
-    {
-      icon: Target,
-      title: "Correção postural",
-      desc: "Avaliação postural global e plano de correção para alívio de tensões e prevenção.",
     },
     {
       icon: Stethoscope,
@@ -346,7 +341,7 @@ function Method() {
 function About() {
   const creds = [
     "Graduada em Fisioterapia (IBMR)",
-    "Pós-graduação em UTI (em andamento)",
+    "Pós-graduação em Terapia Intensiva (em andamento)",
   ];
   return (
     <section id="about" className="bg-[var(--surface)] py-20 md:py-28">
@@ -354,7 +349,7 @@ function About() {
         <div className="relative order-2 md:order-1">
           <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-[var(--gradient-primary)] opacity-10 blur-2xl" />
           <img
-            src={aboutImg}
+            src={aboutAsset.url}
             alt="Retrato profissional"
             width={1024}
             height={1280}
@@ -545,7 +540,7 @@ function Footer() {
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            Fisioterapia clínica, esportiva e postural com olhar humano e base
+            Fisioterapia clínica e esportiva com olhar humano e base
             científica.
           </p>
           <div className="mt-5 text-xs text-muted-foreground">
