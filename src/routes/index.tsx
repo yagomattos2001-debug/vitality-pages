@@ -503,15 +503,15 @@ function CTABanner() {
   return (
     <section className="py-20 md:py-28">
       <div className="container-px mx-auto max-w-6xl">
-        <div className="relative overflow-hidden rounded-3xl bg-[var(--gradient-primary)] p-10 text-primary-foreground shadow-[var(--shadow-card-hover)] md:p-16">
-          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-[var(--accent)]/20 blur-3xl" />
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-10 shadow-[var(--shadow-card-hover)] md:p-16">
+          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/5 blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-primary/5 blur-3xl" />
           <div className="relative grid gap-8 md:grid-cols-[1.5fr_1fr] md:items-center">
             <div>
-              <h2 className="font-display text-3xl font-semibold leading-tight sm:text-4xl">
+              <h2 className="font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
                 Pronto para o primeiro passo?
               </h2>
-              <p className="mt-3 max-w-xl text-base text-primary-foreground/80">
+              <p className="mt-3 max-w-xl text-base text-muted-foreground">
                 Agende sua avaliação e receba um plano personalizado para
                 voltar a se mover com confiança.
               </p>
