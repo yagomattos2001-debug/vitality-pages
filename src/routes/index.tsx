@@ -24,7 +24,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroImg from "@/assets/therapist-hero.jpg";
+import heroAsset from "@/assets/maria-luiza-hero.jpg.asset.json";
 import aboutImg from "@/assets/therapist-about.jpg";
 
 function WhatsAppIcon({ className }: { className?: string }) {
