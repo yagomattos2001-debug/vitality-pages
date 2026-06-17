@@ -6,6 +6,7 @@ import {
   CheckCircle2,
   ClipboardList,
   HeartPulse,
+  Home,
   Menu,
   Phone,
   Sparkles,
@@ -190,10 +191,11 @@ function Hero() {
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border/70 pt-6">
-            {[
+          {[
               { n: "IBMR", l: "Graduada em Fisioterapia" },
               { n: "Terapia Intensiva", l: "Pós-graduação em andamento" },
               { n: "4.9★", l: "avaliação média" },
+              { n: "Domiciliar", l: "Atendimento a domicílio" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-display text-2xl font-semibold text-primary">
@@ -467,6 +469,10 @@ function FAQ() {
       q: "Posso fazer fisioterapia mesmo sem encaminhamento médico?",
       a: "Sim. O fisioterapeuta é profissional de primeiro contato e habilitado para avaliação, diagnóstico funcional e tratamento.",
     },
+    {
+      q: "Você atende a domicílio?",
+      a: "Sim. Realizo atendimento fisioterapêutico a domicílio para pacientes que precisam de conveniência, mobilidade reduzida ou preferem receber o tratamento no conforto de casa.",
+    },
   ];
   return (
     <section id="faq" className="bg-[var(--surface)] py-20 md:py-28">
@@ -568,6 +574,10 @@ function Footer() {
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 text-primary" />
               malusl2001@gmail.com
+            </li>
+            <li className="flex items-start gap-2">
+              <Home className="mt-0.5 h-4 w-4 text-primary" />
+              Atendimento a domicílio disponível
             </li>
           </ul>
         </div>
