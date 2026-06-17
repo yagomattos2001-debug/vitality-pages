@@ -6,6 +6,7 @@ import {
   CheckCircle2,
   ClipboardList,
   HeartPulse,
+  Home,
   Menu,
   Phone,
   Sparkles,
