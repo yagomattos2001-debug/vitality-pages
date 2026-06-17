@@ -516,10 +516,15 @@ function CTABanner() {
                 voltar a se mover com confiança.
               </p>
             </div>
-            <div className="flex md:justify-end">
+            <div className="flex flex-wrap items-center gap-3 md:justify-end">
               <Button asChild variant="hero" size="xl">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener">
                   <WhatsAppIcon className="h-5 w-5" /> Falar no WhatsApp
+                </a>
+              </Button>
+              <Button asChild variant="outlineSoft" size="xl">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener">
+                  <Instagram className="h-5 w-5" /> Instagram
                 </a>
               </Button>
             </div>
