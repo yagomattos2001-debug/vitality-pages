@@ -61,7 +61,10 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATSAPP_URL =
-  "https://wa.me/5521964629111?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação.";
+  "https://wa.me/5521964629111?text=Olá!%20Vi%20a%20sua%20página%20e%20gostaria%20de%20agendar%20uma%20avaliação%20fisioterapêutica.%20Meu%20nome%20é%20[Nome]%20e%20a%20principal%20região%20que%20quero%20tratar%20é%20[Dor/Região].";
+
+const INSTAGRAM_URL =
+  "https://www.instagram.com/dramarialuiza.fisio?igsh=MW1mMmNmZm5xZjd3Nw==";
 
 function Landing() {
   return (
