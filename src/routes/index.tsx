@@ -61,7 +61,10 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATSAPP_URL =
-  "https://wa.me/5521964629111?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação.";
+  "https://wa.me/5521964629111?text=Olá!%20Vi%20a%20sua%20página%20e%20gostaria%20de%20agendar%20uma%20avaliação%20fisioterapêutica.%20Meu%20nome%20é%20[Nome]%20e%20a%20principal%20região%20que%20quero%20tratar%20é%20[Dor/Região].";
+
+const INSTAGRAM_URL =
+  "https://www.instagram.com/dramarialuiza.fisio?igsh=MW1mMmNmZm5xZjd3Nw==";
 
 function Landing() {
   return (
@@ -181,7 +184,9 @@ function Hero() {
               </a>
             </Button>
             <Button asChild variant="outlineSoft" size="xl">
-              <a href="#method">Como funciona</a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener">
+                <Instagram className="h-5 w-5" /> Instagram
+              </a>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border/70 pt-6">
@@ -511,10 +516,15 @@ function CTABanner() {
                 voltar a se mover com confiança.
               </p>
             </div>
-            <div className="flex md:justify-end">
+            <div className="flex flex-wrap items-center gap-3 md:justify-end">
               <Button asChild variant="hero" size="xl">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener">
                   <WhatsAppIcon className="h-5 w-5" /> Falar no WhatsApp
+                </a>
+              </Button>
+              <Button asChild variant="outlineSoft" size="xl">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener">
+                  <Instagram className="h-5 w-5" /> Instagram
                 </a>
               </Button>
             </div>
@@ -565,19 +575,22 @@ function Footer() {
         <div>
           <h4 className="font-display text-sm font-semibold">Siga</h4>
           <div className="mt-4 flex gap-3">
-            {[
-              { Icon: Instagram, label: "Instagram" },
-              { Icon: Facebook, label: "Facebook" },
-            ].map(({ Icon, label }) => (
-              <a
-                key={label}
-                href="#"
-                aria-label={label}
-                className="grid h-10 w-10 place-items-center rounded-full border border-border bg-card text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              className="grid h-10 w-10 place-items-center rounded-full border border-border bg-card text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="grid h-10 w-10 place-items-center rounded-full border border-border bg-card text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>
