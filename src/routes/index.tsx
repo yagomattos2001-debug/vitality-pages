@@ -184,7 +184,9 @@ function Hero() {
               </a>
             </Button>
             <Button asChild variant="outlineSoft" size="xl">
-              <a href="#method">Como funciona</a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener">
+                <Instagram className="h-5 w-5" /> Instagram
+              </a>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border/70 pt-6">
