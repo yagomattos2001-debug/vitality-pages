@@ -458,10 +458,6 @@ function FAQ() {
       a: "Uma avaliação completa de cerca de 60 minutos, com anamnese, exames físicos e testes funcionais. Você sai com um plano de tratamento personalizado já discutido.",
     },
     {
-      q: "Atendem convênios?",
-      a: "O atendimento é particular, com emissão de recibo para reembolso pelo plano de saúde, conforme cobertura individual.",
-    },
-    {
       q: "Quantas sessões serão necessárias?",
       a: "Varia conforme o quadro clínico e os objetivos. Após a avaliação, é apresentada uma estimativa realista de frequência e duração do tratamento.",
     },
